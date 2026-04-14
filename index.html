@@ -1,177 +1,203 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en" dir="ltr" id="main-html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nederlandse Cel voor Vergoeding van  - Slachtoffers in Europa</title>
+    <title>HEALTH & BODY | Premium Fitness Club</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+Arabic:wght@300;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold-main': '#D4AF37',
+                        'gold-dark': '#AA8510',
+                        'dark-bg': '#0A0A0A',
+                    }
+                }
+            }
         }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Cormorant Garamond', serif;
+            scroll-behavior: smooth;
+        }
+        .font-nav { font-family: 'Poiret One', cursive; }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #AA8510 100%);
+        }
+        .gold-text { color: #D4AF37; }
+        
+        .btn-gold {
+            background-color: transparent;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-color: #D4AF37;
+            color: #0A0A0A;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        .card-premium {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-premium:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+        .font-arabic { font-family: 'Noto Sans Arabic', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="overflow-x-hidden">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="bg-blue-900 p-2 rounded">
-                    <i class="fas fa-shield-halved text-white text-2xl"></i>
-                </div>
-                <div class="leading-tight">
-                    <span class="text-xl font-bold tracking-tight text-blue-900 block">NEDERLANDSE CEL</span>
-                    <span class="text-xs font-bold text-orange-600 uppercase">Vergoeding van Slachtoffers in Europa</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex space-x-8 font-medium text-blue-900">
-                <a href="#missies" class="hover:text-orange-600 transition">Onze Missies</a>
-                <a href="#getuigenissen" class="hover:text-orange-600 transition">Getuigenissen</a>
-                <a href="#contact" class="hover:text-orange-600 transition">Contact</a>
-            </nav>
-            <a href="#formulier" class="bg-red-600 text-white px-5 py-2 rounded shadow-lg font-bold hover:bg-red-700 transition">Meld Fraude</a>
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-[#0A0A0A] bg-opacity-95 border-b border-gray-900">
+        <div class="text-3xl font-bold font-nav text-gold-main tracking-wider">HEALTH<span class="text-white">&</span>BODY</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-nav">
+            <a href="#about" class="hover:text-gold-main transition">About</a>
+            <a href="#pricing" class="hover:text-gold-main transition">Memberships</a>
+            <a href="#" class="hover:text-gold-main transition">Contact</a>
         </div>
-    </header>
+        <div class="flex gap-4 items-center">
+            <button onclick="switchLang('en')" class="text-xs border border-gray-700 px-3 py-1.5 rounded hover:border-gold-main hover:text-gold-main transition">EN</button>
+            <button onclick="switchLang('ar')" class="text-xs border border-gray-700 px-3 py-1.5 rounded hover:border-gold-main hover:text-gold-main transition font-arabic">عربي</button>
+        </div>
+    </nav>
 
-    <section class="relative gradient-bg text-white py-16 md:py-24 border-b-4 border-orange-500">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-3/5 mb-10 md:mb-0">
-                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-                    Cellule Néerlandaise de  remboursement des victimes en Europe.
-                </h1>
-                <p class="text-lg text-blue-100 mb-8 leading-relaxed">
-                    Wij zijn gespecialiseerd in het opsporen van financiële stromen en het assisteren van slachtoffers van online fraude in heel Europa. Uw terugbetaling is onze prioriteit.
-                </p>
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 px-4 text-center">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-gold-main rounded-full blur-[150px]"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-dark rounded-full blur-[150px]"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <h1 id="hero-title" class="text-5xl md:text-8xl font-bold mb-6 leading-tight">
+                YOUR GOAL. <br><span class="text-gold-main">OUR EXPERTISE.</span>
+            </h1>
+            <p id="hero-sub" class="max-w-2xl mx-auto text-gray-300 text-xl mb-12 font-light">
+                A modern and welcoming fitness club. High-quality equipment and certified coaches to help you progress, whatever your level.
+            </p>
+            <a href="#pricing" class="btn-gold px-12 py-4 rounded-full text-sm font-bold uppercase tracking-widest inline-block">Explore Plans</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#0E0E0E]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Modern Equipment</h3>
+                <p class="text-gray-400 font-light">The latest generation of cardio and strength machines for an effective workout.</p>
             </div>
-
-            <div class="md:w-1/3 w-full">
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl">
-                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                        <span class="flex h-3 w-3 rounded-full bg-green-400 animate-pulse"></span>
-                        Contact Direct
-                    </h3>
-                    <div class="space-y-4">
-                        <a href="tel:+33780996348" class="flex items-center p-3 bg-white/5 rounded-lg hover:bg-orange-500 transition group">
-                            <i class="fas fa-phone-alt mr-4 text-orange-400 group-hover:text-white transition"></i>
-                            <span class="font-bold">+33780996348</span>
-                        </a>
-                        <a href="mailto:remboursement@cnlcrv.com" class="flex items-center p-3 bg-white/5 rounded-lg hover:bg-orange-500 transition group">
-                            <i class="fas fa-envelope mr-4 text-orange-400 group-hover:text-white transition"></i>
-                            <span class="font-bold text-sm">remboursement@cnlcrv.com</span>
-                        </a>
-                        
-                            
-                            <span class="font-bold text-green-400 group-hover:text-white">FAX 24/7</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Expert Coaches</h3>
+                <p class="text-gray-400 font-light">Personalized guidance and expert advice to achieve your results quickly.</p>
+            </div>
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Open 7/7</h3>
+                <p class="text-gray-400 font-light">Fit your workout into your schedule with broad and flexible opening hours.</p>
             </div>
         </div>
     </section>
 
-    <section id="missies" class="py-20 container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-900 uppercase tracking-wide">Onze Expertise in Europa</h2>
-            <div class="h-1 w-20 bg-orange-500 mx-auto mt-4"></div>
-        </div>
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200 hover:shadow-xl transition">
-                <i class="fas fa-search-dollar text-4xl text-orange-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-3 text-blue-900">Financieel onderzoek</h4>
-                <p class="text-slate-600">Geavanceerde tracering van cryptocurrency en internationale SEPA-overboekingen om daders te lokaliseren.</p>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200 hover:shadow-xl transition">
-                <i class="fas fa-balance-scale text-4xl text-orange-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-3 text-blue-900">Juridische blokkering</h4>
-                <p class="text-slate-600">Samenwerking met Europese autoriteiten om frauduleuze bankrekeningen onmiddellijk te bevriezen.</p>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-200 hover:shadow-xl transition">
-                <i class="fas fa-hand-holding-heart text-4xl text-orange-500 mb-4"></i>
-                <h4 class="text-xl font-bold mb-3 text-blue-900">Fondsenherstel</h4>
-                <p class="text-slate-600">Een gestructureerd proces om teruggevorderde bedragen veilig terug te storten naar gecertificeerde slachtoffers.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="getuigenissen" class="py-20 bg-slate-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-blue-900">Wat onze cliënten zeggen</h2>
-                <p class="text-slate-600 mt-4 font-medium italic">Alle getuigenissen zijn geanonimiseerd om de privacy te beschermen.</p>
-            </div>
+    <section id="pricing" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 id="price-title" class="text-4xl font-bold mb-16 text-center tracking-wide uppercase">Membership Plans</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-orange-500">
-                    <p class="text-slate-700 italic mb-6 text-sm">"Na 15.000€ verloren te hebben aan een neppe broker, hielp de cel me de fondsen te traceren naar een wallet in Amsterdam. Ik heb 85% terug."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs italic">Pieter V.</div>
-                        <span class="text-xs font-bold text-green-600 underline">Dossier #NL-4421</span>
-                    </div>
+                <div class="card-premium p-10 rounded-2xl flex flex-col items-center">
+                    <span class="text-sm gold-text mb-4 tracking-widest uppercase font-nav">Starter</span>
+                    <div class="text-6xl font-bold mb-2">29€</div>
+                    <div class="text-sm text-gray-500 mb-8">per month</div>
+                    <ul class="text-gray-300 text-base space-y-4 mb-12 text-center font-light">
+                        <li>Unlimited 7/7 Access</li>
+                        <li>Cardio & Strength Area</li>
+                        <li>Locker Rooms & Showers</li>
+                    </ul>
+                    <button class="w-full py-3 border border-gray-600 rounded-lg hover:border-gold-main hover:text-gold-main transition uppercase text-xs font-bold tracking-widest font-nav">Select</button>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-orange-500">
-                    <p class="text-slate-700 italic mb-6 text-sm">"Zeer professioneel team. Mijn bankrekening was gehackt en de daders stonden al klaar om alles door te sturen. Snel ingegrepen."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs italic">Lotte S.</div>
-                        <span class="text-xs font-bold text-green-600 underline">Dossier #NL-9908</span>
-                    </div>
+
+                <div class="card-premium p-10 rounded-2xl flex flex-col items-center border-gold-main shadow-[0_0_25px_rgba(212,175,55,0.15)] scale-105 relative overflow-hidden bg-[#111]">
+                    <div class="absolute top-0 right-0 gold-gradient text-black text-[10px] font-bold px-5 py-1.5 uppercase tracking-wider font-nav">Most Popular</div>
+                    <span class="text-sm gold-text mb-4 tracking-widest uppercase font-nav">Premium</span>
+                    <div class="text-6xl font-bold mb-2">59€</div>
+                    <div class="text-sm text-gray-500 mb-8">per month</div>
+                    <ul class="text-gray-300 text-base space-y-4 mb-12 text-center font-light">
+                        <li><strong>All Starter Benefits</strong></li>
+                        <li>Unlimited Group Classes</li>
+                        <li>1 Personal Training Session/mo</li>
+                        <li>Sauna & Spa Access</li>
+                    </ul>
+                    <button class="w-full py-3 btn-gold rounded-lg uppercase text-xs font-bold tracking-widest font-nav">Join Now</button>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-orange-500">
-                    <p class="text-slate-700 italic mb-6 text-sm">"Bedankt voor de menselijke aanpak. Je voelt je minder alleen in zo'n situatie. De communicatie via WhatsApp was uitstekend."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-900 text-white rounded-full flex items-center justify-center font-bold mr-3 text-xs italic">H. Bos</div>
-                        <span class="text-xs font-bold text-green-600 underline">Dossier #NL-5563</span>
-                    </div>
+
+                <div class="card-premium p-10 rounded-2xl flex flex-col items-center">
+                    <span class="text-sm gold-text mb-4 tracking-widest uppercase font-nav">Elite</span>
+                    <div class="text-6xl font-bold mb-2">99€</div>
+                    <div class="text-sm text-gray-500 mb-8">per month</div>
+                    <ul class="text-gray-300 text-base space-y-4 mb-12 text-center font-light">
+                        <li><strong>All Premium Benefits</strong></li>
+                        <li>Weekly Personal Training</li>
+                        <li>Health & Nutrition Plan</li>
+                        <li>Priority Event Access</li>
+                    </ul>
+                    <button class="w-full py-3 border border-gray-600 rounded-lg hover:border-gold-main hover:text-gold-main transition uppercase text-xs font-bold tracking-widest font-nav">Select</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="bg-blue-900 rounded-3xl p-10 md:p-16 text-white flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
-                <div class="md:w-1/2 mb-10 md:mb-0 relative z-10">
-                    <h2 class="text-3xl font-bold mb-6 italic underline decoration-orange-500 decoration-4">Neem contact op</h2>
-                    <p class="text-blue-100 mb-8 leading-relaxed">
-                        Onze specialisten staan klaar om uw dossier te analyseren en spoedprocedures op te starten bij banken en platforms.
-                    </p>
-                    
-                    <div class="space-y-6 text-lg">
-                        <div class="flex items-center hover:text-orange-400 transition cursor-pointer">
-                            <i class="fas fa-phone-alt mr-4 text-2xl"></i>
-                            <span class="font-bold">+33780996348</span>
-                        </div>
-                        <div class="flex items-center hover:text-orange-400 transition cursor-pointer">
-                            <i class="fas fa-envelope mr-4 text-2xl"></i>
-                            <span class="font-bold">remboursement@cnlcrv.com</span>
-                        </div>
-                        <div class="flex items-center text-green-400">
-                            
-                            <span class="font-bold">24/7 FAX</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-800 rounded-full opacity-50"></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-8 md:mb-0">
-                <p class="font-bold text-white mb-2 uppercase tracking-widest">Nederlandse Cel voor Vergoeding van Slachtoffers in Europa</p>
-                <p class="text-sm max-w-sm">Officiële Europese eenheid voor fraudebestrijding en slachtofferhulp.</p>
-                <p class="text-xs mt-4 italic">Conform de Algemene Verordening Gegevensbescherming (AVG/GDPR).</p>
-            </div>
-            <div class="text-sm">
-                <div class="flex space-x-6 justify-center md:justify-end mb-4">
-                    <a href="#" class="hover:text-white">Privacybeleid</a>
-                    <a href="#" class="hover:text-white">Gebruiksvoorwaarden</a>
-                </div>
-                &copy; 2016 Alle rechten voorbehouden.
-            </div>
+    <footer class="py-12 border-t border-gray-900 text-center bg-[#080808]">
+        <div class="text-gray-500 text-sm tracking-wider font-nav uppercase">
+            &copy; 2024 HEALTH & BODY - London | Paris | Dubai
         </div>
     </footer>
 
+    <script>
+        const content = {
+            en: {
+                title: "YOUR GOAL. <br><span class='text-gold-main'>OUR EXPERTISE.</span>",
+                sub: "A modern and welcoming fitness club. High-quality equipment and certified coaches to help you progress, whatever your level.",
+                priceTitle: "Membership Plans",
+                dir: "ltr"
+            },
+            ar: {
+                title: "هدفك. <br><span class='text-gold-main'>خبرتنا.</span>",
+                sub: "نادي رياضي حديث وترحيبي. معدات عالية الجودة ومدربون معتمدون لمساعدتك على التقدم، مهما كان مستواك.",
+                priceTitle: "خطط العضوية",
+                dir: "rtl"
+            }
+        };
+
+        function switchLang(lang) {
+            const html = document.getElementById('main-html');
+            const title = document.getElementById('hero-title');
+            const sub = document.getElementById('hero-sub');
+            const pTitle = document.getElementById('price-title');
+            
+            html.setAttribute('dir', content[lang].dir);
+            html.setAttribute('lang', lang);
+            
+            title.innerHTML = content[lang].title;
+            sub.innerText = content[lang].sub;
+            pTitle.innerText = content[lang].priceTitle;
+
+            if(lang === 'ar') {
+                title.classList.add('font-arabic');
+                sub.classList.add('font-arabic');
+            } else {
+                title.classList.remove('font-arabic');
+                sub.classList.remove('font-arabic');
+            }
+        }
+    </script>
 </body>
 </html>
