@@ -53,16 +53,31 @@
             transform: translateY(-5px);
             border-color: #D4AF37;
         }
+        /* Style pour les images */
+        .gym-photo {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gym-photo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            border-color: #D4AF37;
+        }
+
         .font-arabic { font-family: 'Noto Sans Arabic', sans-serif; }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-[#0A0A0A] bg-opacity-95 border-b border-gray-900">
-        <div class="text-3xl font-bold font-nav text-gold-main tracking-wider">Dubai Fitness<span class="text-white">&</span>Club</div>
+        <div class="text-3xl font-bold font-nav text-gold-main tracking-wider">DUBAI FITNESS<span class="text-white">&</span>CLUB</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-nav">
             <a href="#about" class="hover:text-gold-main transition">About</a>
-            <a href="#pricing" class="hover:text-gold-main transition">Memberships</a>
+            <a href="#experience" class="hover:text-gold-main transition">The Experience</a> <a href="#pricing" class="hover:text-gold-main transition">Memberships</a>
             <a href="#" class="hover:text-gold-main transition">Contact</a>
         </div>
         <div class="flex gap-4 items-center">
@@ -79,7 +94,7 @@
         
         <div class="relative z-10 max-w-4xl">
             <h1 id="hero-title" class="text-5xl md:text-8xl font-bold mb-6 leading-tight">
-                YOUR GOAL. <br><span class="text-gold-main">OUR EXPERTISE.</span>
+                YOUR HEALTH. <br><span class="text-gold-main">OUR GOAL.</span>
             </h1>
             <p id="hero-sub" class="max-w-2xl mx-auto text-gray-300 text-xl mb-12 font-light">
                 A modern and welcoming fitness club. High-quality equipment and certified coaches to help you progress, whatever your level.
@@ -108,7 +123,38 @@
         </div>
     </section>
 
-    <section id="pricing" class="py-24 px-6">
+    <section id="experience" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 id="experience-title" class="text-4xl font-bold mb-16 text-center tracking-wide uppercase">THE CLUB EXPERIENCE</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-semibold gold-text">Dedicated to Effort</h3>
+                    <p class="text-gray-300 text-lg font-light">
+                        Our facility is designed for those who push their limits. From functional training to performance tracking, every detail is focused on helping you achieve peak condition.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="image_0.png" alt="Athlete training intense" class="gym-photo">
+                        <img src="image_4.png" alt="Performance tracking monitor" class="gym-photo">
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="image_1.png" alt="Modern strength equipment" class="gym-photo">
+                        <img src="image_2.png" alt="Functional training area" class="gym-photo">
+                    </div>
+                    <h3 class="text-3xl font-semibold gold-text">Premium Facility</h3>
+                    <p class="text-gray-300 text-lg font-light">
+                        Experience a new standard of fitness. Our spacious gym offers a carefully curated selection of equipment, well-designed locker rooms, and an environment that inspires excellence.
+                    </p>
+                     <img src="image_3.png" alt="Global gym view" class="gym-photo w-full h-64">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 bg-[#0E0E0E]">
         <div class="max-w-7xl mx-auto">
             <h2 id="price-title" class="text-4xl font-bold mb-16 text-center tracking-wide uppercase">Membership Plans</h2>
             
@@ -166,12 +212,14 @@
             en: {
                 title: "YOUR GOAL. <br><span class='text-gold-main'>OUR EXPERTISE.</span>",
                 sub: "A modern and welcoming fitness club. High-quality equipment and certified coaches to help you progress, whatever your level.",
+                experienceTitle: "THE CLUB EXPERIENCE",
                 priceTitle: "Membership Plans",
                 dir: "ltr"
             },
             ar: {
                 title: "هدفك. <br><span class='text-gold-main'>خبرتنا.</span>",
                 sub: "نادي رياضي حديث وترحيبي. معدات عالية الجودة ومدربون معتمدون لمساعدتك على التقدم، مهما كان مستواك.",
+                experienceTitle: "تجربة النادي",
                 priceTitle: "خطط العضوية",
                 dir: "rtl"
             }
@@ -181,6 +229,7 @@
             const html = document.getElementById('main-html');
             const title = document.getElementById('hero-title');
             const sub = document.getElementById('hero-sub');
+            const eTitle = document.getElementById('experience-title');
             const pTitle = document.getElementById('price-title');
             
             html.setAttribute('dir', content[lang].dir);
@@ -188,14 +237,19 @@
             
             title.innerHTML = content[lang].title;
             sub.innerText = content[lang].sub;
+            eTitle.innerText = content[lang].experienceTitle;
             pTitle.innerText = content[lang].priceTitle;
 
             if(lang === 'ar') {
                 title.classList.add('font-arabic');
                 sub.classList.add('font-arabic');
+                eTitle.classList.add('font-arabic');
+                pTitle.classList.add('font-arabic');
             } else {
                 title.classList.remove('font-arabic');
                 sub.classList.remove('font-arabic');
+                eTitle.classList.remove('font-arabic');
+                pTitle.classList.remove('font-arabic');
             }
         }
     </script>
