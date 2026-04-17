@@ -103,26 +103,6 @@
         </div>
     </section>
 
-    <section id="about" class="py-24 px-6 bg-[#0E0E0E]">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-            <div class="p-6">
-                <div class="text-gold-main text-5xl mb-6">✓</div>
-                <h3 class="text-2xl font-semibold mb-4">Modern Equipment</h3>
-                <p class="text-gray-400 font-light">The latest generation of cardio and strength machines for an effective workout.</p>
-            </div>
-            <div class="p-6">
-                <div class="text-gold-main text-5xl mb-6">✓</div>
-                <h3 class="text-2xl font-semibold mb-4">Expert Coaches</h3>
-                <p class="text-gray-400 font-light">Personalized guidance and expert advice to achieve your results quickly.</p>
-            </div>
-            <div class="p-6">
-                <div class="text-gold-main text-5xl mb-6">✓</div>
-                <h3 class="text-2xl font-semibold mb-4">Open 7/7</h3>
-                <p class="text-gray-400 font-light">Fit your workout into your schedule with broad and flexible opening hours.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="experience" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 id="experience-title" class="text-4xl font-bold mb-16 text-center tracking-wide uppercase">THE CLUB EXPERIENCE</h2>
@@ -150,6 +130,26 @@
                     </p>
                      <img src="img4.jpeg" alt="Global gym view" class="gym-photo w-full h-64">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#0E0E0E]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Modern Equipment</h3>
+                <p class="text-gray-400 font-light">The latest generation of cardio and strength machines for an effective workout.</p>
+            </div>
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Expert Coaches</h3>
+                <p class="text-gray-400 font-light">Personalized guidance and expert advice to achieve your results quickly.</p>
+            </div>
+            <div class="p-6">
+                <div class="text-gold-main text-5xl mb-6">✓</div>
+                <h3 class="text-2xl font-semibold mb-4">Open 7/7</h3>
+                <p class="text-gray-400 font-light">Fit your workout into your schedule with broad and flexible opening hours.</p>
             </div>
         </div>
     </section>
@@ -201,6 +201,49 @@
         </div>
     </section>
 
+    <section id="contact" class="py-24 px-6 bg-[#0A0A0A]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center tracking-wide uppercase text-gold-main">Contact Us</h2>
+            <h2 class="text-4xl font-bold mb-16 text-center tracking-wide uppercase text-gold-main font-arabic" style="display:none">تواصل معنا</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold gold-text mb-4">Location</h3>
+                        <p class="text-gray-300 text-lg font-light">
+                            Dubai Fitness Club<br>
+                            Dubai Sports City<br>
+                            Dubai, United Arab Emirates
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold gold-text mb-4">Phone</h3>
+                        <p class="text-gray-300 text-lg font-light">
+                            +971 4 308 4333
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-8" dir="rtl" style="display:none">
+                    <div>
+                        <h3 class="text-2xl font-semibold gold-text mb-4 font-arabic">الموقع</h3>
+                        <p class="text-gray-300 text-lg font-light font-arabic">
+                            نادي دبي للياقة البدنية<br>
+                            مدينة دبي الرياضية<br>
+                            دبي، الإمارات العربية المتحدة
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold gold-text mb-4 font-arabic">الهاتف</h3>
+                        <p class="text-gray-300 text-lg font-light font-arabic">
+                            +971 4 308 4333
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="py-12 border-t border-gray-900 text-center bg-[#080808]">
         <div class="text-gray-500 text-sm tracking-wider font-nav uppercase">
             &copy; 2024 HEALTH & BODY - London | Paris | Dubai
@@ -217,7 +260,7 @@
                 dir: "ltr"
             },
             ar: {
-                title: "هدفك. <br><span class='text-gold-main'>خبرتنا.</span>",
+                title: "صحتك. <br><span class='text-gold-main'>هدفنا.</span>",
                 sub: "نادي رياضي حديث وترحيبي. معدات عالية الجودة ومدربون معتمدون لمساعدتك على التقدم، مهما كان مستواك.",
                 experienceTitle: "تجربة النادي",
                 priceTitle: "خطط العضوية",
@@ -232,6 +275,9 @@
             const eTitle = document.getElementById('experience-title');
             const pTitle = document.getElementById('price-title');
             
+            // Contact section elements
+            const contactElements = document.querySelectorAll('#contact > div > h2, #contact > div > .grid > div');
+            
             html.setAttribute('dir', content[lang].dir);
             html.setAttribute('lang', lang);
             
@@ -240,16 +286,30 @@
             eTitle.innerText = content[lang].experienceTitle;
             pTitle.innerText = content[lang].priceTitle;
 
+            // Toggle contact section visibility based on language
+            const contactEnglish = document.querySelectorAll('#contact .grid > div:first-child');
+            const contactArabic = document.querySelectorAll('#contact .grid > div:last-child');
+            const contactTitleEn = document.querySelector('#contact > div > h2:not(.font-arabic)');
+            const contactTitleAr = document.querySelector('#contact > div > h2.font-arabic');
+            
             if(lang === 'ar') {
                 title.classList.add('font-arabic');
                 sub.classList.add('font-arabic');
                 eTitle.classList.add('font-arabic');
                 pTitle.classList.add('font-arabic');
+                if(contactTitleEn) contactTitleEn.style.display = 'none';
+                if(contactTitleAr) contactTitleAr.style.display = 'block';
+                contactEnglish.forEach(el => el.style.display = 'none');
+                contactArabic.forEach(el => el.style.display = 'block');
             } else {
                 title.classList.remove('font-arabic');
                 sub.classList.remove('font-arabic');
                 eTitle.classList.remove('font-arabic');
                 pTitle.classList.remove('font-arabic');
+                if(contactTitleEn) contactTitleEn.style.display = 'block';
+                if(contactTitleAr) contactTitleAr.style.display = 'none';
+                contactEnglish.forEach(el => el.style.display = 'block');
+                contactArabic.forEach(el => el.style.display = 'none');
             }
         }
     </script>
